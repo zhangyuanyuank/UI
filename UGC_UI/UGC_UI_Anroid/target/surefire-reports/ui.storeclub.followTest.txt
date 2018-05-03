@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: ui.storeclub.followTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec <<< FAILURE!
+ui.storeclub.followTest.testfollow()  Time elapsed: 0.103 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at util.LoginUtil.makeunLogin(LoginUtil.java:194)
+	at ui.storeclub.followTest.testfollow(followTest.java:18)
+

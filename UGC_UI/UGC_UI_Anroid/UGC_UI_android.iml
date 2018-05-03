@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="guava-23.0-javadoc" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.google.guava:guava:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/guava-23.0-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.apache.httpcomponents:httpclient:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/httpcomponents-client-4.5.3-bin.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: io.appium:java-client:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/java-client-2.2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.seleniumhq.selenium:selenium-java:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/selenium-java-3.5.2.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.seleniumhq.selenium:selenium-server:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/selenium-server-standalone-2.44.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: net.sf.json-lib:json-lib:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bao/java-json.jar.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: ui.storeclub.TrendTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 209.553 sec <<< FAILURE!
+ui.storeclub.TrendTest.testtrend_feed()  Time elapsed: 125.569 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51.96 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'ae-sz-testdeiMac.local', ip: '192.168.56.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.1', java.version: '1.8.0_152-ea'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, deviceScreenSize=1440x2560, networkConnectionEnabled=true, utdid=Appium, warnings={}, appWaitPackage=com.alibaba.aliexpresshd, appWaitActivity=com.alibaba.aliexpresshd.module.home.MainActivity, databaseEnabled=false, deviceName=192.168.56.101:5555, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.alibaba.aliexpresshd.module.home.MainActivity, desired={app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, utdid=Appium, platformVersion=7.1.1, platformName=Android, deviceName=Android Device}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Google Nexus 6P - 7.1.0 - API 25 - 1440x2560, platformName=Android, deviceManufacturer=Genymotion}]
+Session ID: 5df355c7-cbcb-49d4-bd43-c1b4b7469eb8
+	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at ui.storeclub.TrendTest.testtrend_feed(TrendTest.java:47)
+
+ui.storeclub.TrendTest.testtrend_detail_sign()  Time elapsed: 83.983 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'ae-sz-testdeiMac.local', ip: '192.168.56.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.1', java.version: '1.8.0_152-ea'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, deviceScreenSize=1440x2560, networkConnectionEnabled=true, utdid=Appium, warnings={}, appWaitPackage=com.alibaba.aliexpresshd, appWaitActivity=com.alibaba.aliexpresshd.module.home.MainActivity, databaseEnabled=false, deviceName=192.168.56.101:5555, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.alibaba.aliexpresshd.module.home.MainActivity, desired={app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, utdid=Appium, platformVersion=7.1.1, platformName=Android, deviceName=Android Device}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Google Nexus 6P - 7.1.0 - API 25 - 1440x2560, platformName=Android, deviceManufacturer=Genymotion}]
+Session ID: 780ac6e5-d68b-451a-9870-4f54bdf7d49a
+	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at io.appium.java_client.android.AndroidDriver.findElementByAndroidUIAutomator(AndroidDriver.java:255)
+	at ui.storeclub.TrendTest.testtrend_detail_sign(TrendTest.java:104)
+

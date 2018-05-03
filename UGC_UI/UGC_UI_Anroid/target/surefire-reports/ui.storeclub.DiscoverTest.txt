@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: ui.storeclub.DiscoverTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.21 sec <<< FAILURE!
+ui.storeclub.DiscoverTest.testdiscover()  Time elapsed: 0.104 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at util.LoginUtil.makeunLogin(LoginUtil.java:194)
+	at ui.storeclub.DiscoverTest.testdiscover(DiscoverTest.java:20)
+
+ui.storeclub.DiscoverTest.testdiscover_sign()  Time elapsed: 0.106 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at util.LoginUtil.makeLogin(LoginUtil.java:218)
+	at ui.storeclub.DiscoverTest.testdiscover_sign(DiscoverTest.java:96)
+

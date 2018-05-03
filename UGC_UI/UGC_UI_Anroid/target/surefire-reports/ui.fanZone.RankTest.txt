@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: ui.fanZone.RankTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 288.691 sec <<< FAILURE!
+ui.fanZone.RankTest.testrank()  Time elapsed: 288.69 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 97 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'ae-sz-testdeiMac.local', ip: '192.168.56.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.1', java.version: '1.8.0_152-ea'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, deviceScreenSize=1440x2560, networkConnectionEnabled=true, utdid=Appium, warnings={}, appWaitPackage=com.alibaba.aliexpresshd, appWaitActivity=com.alibaba.aliexpresshd.module.home.MainActivity, databaseEnabled=false, deviceName=192.168.56.101:5555, platform=LINUX, deviceUDID=192.168.56.101:5555, appActivity=com.alibaba.aliexpresshd.module.home.MainActivity, desired={app=/Users/ae-sz-test/env/AndroidSDK/platform-tools/AliExpressApp-play-release.apk, appPackage=com.alibaba.aliexpresshd, utdid=Appium, platformVersion=7.1.1, platformName=Android, deviceName=Android Device}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Google Nexus 6P - 7.1.0 - API 25 - 1440x2560, platformName=Android, deviceManufacturer=Genymotion}]
+Session ID: 5c9162ec-0897-4a9d-bdb4-93ef1a343364
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at ui.fanZone.RankTest.testrank(RankTest.java:123)
+

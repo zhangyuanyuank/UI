@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html lang="en">
+<head>
+    <style type="text/css">  
+    .align_center {
+      width:1000px;
+      margin:0 auto;
+    }
+    .red {
+      color: red;}
+    .green {
+      color: green; }
+    .yellow {
+      color: yellow; }
+    .blue {
+      color: blue; }
+    .box {
+      right:0;
+      left:20;
+      background:#fff;
+      margin-bottom:20px;
+      padding:0;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -webkit-box-shadow:0 0 10px #DCDCDC inset;
+      -moz-box-shadow:0 0 10px #DCDCDC inset;
+      box-shadow:0 0 10px #DCDCDC inset;
+    }
+    .grid_6 {
+      display:none;
+      width:100%;
+    }
+
+        .line{
+        border: 1px solid #999;
+        padding: 0px;
+        border-radius: 3px;
+        box-shadow: 0px;
+        }
+    .test{
+      table-layout:fixed;
+      width:100%;
+      border:1px solid #bbb;
+      margin-bottom:10px;
+        cellpadding:5px;
+
+    }
+    </style>
+
+    <title>自动化测试结果</title>
+</head>
+<body>
+	<div class="align_center">
+        <div id="summary"> <!-- summary infos about test suite: including case number. passed, failed and crashed numbers -->
+            <h2 align="center">测试设备信息</h2>
+            <div class="line"></div>
+            <table align="center" width="100%" border="0" cellpadding="12">
+                <tr><td><font color="blue" size="4"> {{ result.device }} </font></td></tr>
+            </table>
+            <div class="line"></div>
+            <br/>
+            <h2 align="center">测试结果总预览</h2>
+            <table align="center" cellpadding="6" cellspacing="2" border="0" width="95%">
+                <tr bgcolor="#0099FF">
+                    <td><font color="white">Tests</font></td>
+                    <td><font color="white">Passed</font></td>
+                    <td><font color="white">Failed</font></td>
+                    <td><font color="white">Crashed</font></td>
+                    <td><font color="white">Success Rate</font></td>
+                    <td><font color="white">Duration</font></td>
+                </tr>
+                <tr bgcolor="#FFFFCC">
+                    <td>{{ result.caseNum }}</td>
+                    <td><span class="green">{{ result.passCaseNum }}</span></td>
+                    <td><span class="red">{{ result.failCaseNum }}</span></td>
+                    <td><span class="red">{{ result.crashCaseNum }}</span></td>
+                    <td>{{ result.passRate }}</td>
+                    <td>{{ result.duration }}</td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <br/>
+             <table align="center" cellpadding="6" cellspacing="2" border="0" width="95%">
+                 <tr bgcolor="#0099FF">
+                     <td><font color="white">测试用例</font></td>
+                     <td><font color="white">用例描述</font></td>
+                     <td><font color="white">执行时间</font></td>
+                     <td><font color="white">测试结果</font></td>
+                     <td><font color="white">测试Log</font></td>
+                 </tr>
+                 {% for item in result.cases %}
+                 <tr bgcolor="#FFFFCC">
+                     {% if item.result=="pass" %}
+                     <td><a href="{{ item.report }}"><font color="blue">{{ item.name }}</font></a></td>
+                     {% else %}
+                     <td><a href="{{ item.report }}"><font color="red">{{ item.name }}</font></a></td>
+                     {% endif %}
+                     <td>{{ item.desc }}</td>
+                     <td>{{ item.duration }}</td>
+                     {% if item.result=="pass" %}
+                     <td><font color="green">{{ item.result }}</font></td>
+                     {% else %}
+                     <td><font color="red">{{ item.result }}</font></td>
+                     {% endif %}
+                     <td><a href="{{ item.log }}">trace log</a></td>
+
+                 </tr>
+                 {% endfor %}
+             </table>
+  </div>
+</body>
+</html>

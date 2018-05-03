@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html lang="en">
+<head>
+    <style type="text/css">  
+    .align_center {
+      width:1000px;
+      margin:0 auto;
+    }
+    .red {
+      color: red;}
+    .green {
+      color: green; }
+    .yellow {
+      color: yellow; }
+    .blue {
+      color: blue; }
+    .box {
+      right:0;
+      left:20;
+      background:#fff;
+      margin-bottom:20px;
+      padding:0;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -webkit-box-shadow:0 0 10px #DCDCDC inset;
+      -moz-box-shadow:0 0 10px #DCDCDC inset;
+      box-shadow:0 0 10px #DCDCDC inset;
+    }
+    .grid_6 {
+      display:none;
+      width:100%;
+    }
+    table{
+      table-layout:fixed;
+      width:100%;
+      border:1px solid #bbb;
+      margin-bottom:10px;
+    }
+    </style>
+
+    <title>数据打点结果</title>
+</head>
+<body>
+	<div class="align_center">
+        <div>
+            <h1 align="center">数据打点结果报告</h1>
+        </div>
+	    <table class="table" rules="all" cellpadding="10">
+          <tr bgcolor="#3366FF">
+            <td><font color="white" size="6">事件</font></td>
+            <td><font color="white" size="6">动作</font></td>
+            <td><font color="white" size="6">参数</font></td>
+            <td><font color="white" size="6">是否打点</font></td>
+          </tr>
+          {% for item in trackedData %}
+          <tr>
+            <td><font size="4" color="green" style="font-weight: bold;font-style: italic;">{{ item.desc }}</font></td>
+            <td>{{ item.action }}</td>
+            <td>{{ item.param }}</td>
+            <td><span class="green">已打点</span></td>
+          </tr>
+          {% endfor %}
+          {% for item in ntrackedData %}
+          <tr>
+            <td><font size="4" color="red" style="font-weight: bold;font-style: italic;">{{ item.desc }}</font></td>
+            <td>{{ item.action }}</td>
+            <td>{{ item.param }}</td>
+            <td><span class="red">未打点</span></td>
+          </tr>
+          {% endfor %}
+    </table>  
+  </div>
+</body>
+</html>

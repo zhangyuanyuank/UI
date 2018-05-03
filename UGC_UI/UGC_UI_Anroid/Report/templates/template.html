@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://10.101.80.150:8080/css/min.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container" role="main">
+            <h2 align="center "> <small>{{ result.time }}</small></h2>
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">运行概况</div>
+                <table class="table table-bordered table-responsive">
+                    <tr>
+                        <td class="col-md-2">总运行数</td>
+                        <td class="col-md-2">{{ result.caseNum }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">成功</td>
+                        <td class="success col-md-2">{{ result.passCaseNum }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">失败</td>
+                        <td class="warning col-md-2">{{ result.failCaseNum }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">Crash</td>
+                        <td class="danger col-md-2">{{ result.crashCaseNum }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">总运行时间</td>
+                        <td class="col-md-2">{{ result.duration }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">打点监控</td>
+                        <td class="col-md-2"><a href="./UT_track.html">点击我</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">设备信息</div>
+                <table class="table table-bordered table-responsive">
+                    <tr>
+                        <td class="col-md-2">设备类型</td>
+                        <td class="col-md-2">{{ result.device.model }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2">操作系统</td>
+                        <td class="col-md-2">{{ result.device.os }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">自动化详情</div>
+                <table class="table table-bordered table-responsive">
+                    <tr bgcolor="#CCCCCC">
+                     <td><font color="white">测试用例</font></td>
+                     <td><font color="white">用例描述</font></td>
+                     <td><font color="white">执行时间</font></td>
+                     <td><font color="white">测试结果</font></td>
+                     <td><font color="white">测试Log</font></td>
+                 </tr>
+                 {% for item in result.cases %}
+                 <tr>
+                     {% if item.result=="pass" %}
+                     <td><a href="{{ item.report }}"><font color="blue">{{ item.name }}</font></a></td>
+                     {% else %}
+                     <td><a href="{{ item.report }}"><font color="red">{{ item.name }}</font></a></td>
+                     {% endif %}
+                     <td>{{ item.desc }}</td>
+                     <td>{{ item.duration }}</td>
+                     {% if item.result=="pass" %}
+                     <td><font color="green">{{ item.result }}</font></td>
+                     {% else %}
+                     <td><font color="red">{{ item.result }}</font></td>
+                     {% endif %}
+                     <td><a href="{{ item.log }}">trace log</a></td>
+
+                 </tr>
+                 {% endfor %}
+                    
+                </table>
+            </div>
+            
+        </div>
+    </body>
+</html>
